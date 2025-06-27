@@ -4,8 +4,6 @@ import SignupPage from "./Components/SignupPage";
 import ForgotPasswordPage from "./Components/ForgotPasswordPage";
 import HomePage  from "./Pages/HomePage";
 import ContactPage from "./Pages/ContactusPages";
-import AdminDashboard from "./Pages/DeshboardPage";
-import AdminLoginPage from "./Pages/AdminLoginPage";
 import Feature from "./Pages/Feature";
 import MicrophoneAccessPrompt from "./Pages/EnableMicrophone";
 import voice from "./Pages/Voice";
@@ -29,8 +27,6 @@ function App() {
         <Route path="/forgot" element={<ForgotPasswordPage/>} />
        <Route path="/home" element={<HomePage/>} />
         <Route path="/contactus" element={<ContactPage/>} />
-        <Route path="/dashboard" element={<AdminDashboard/>} />
-        <Route path="/adminlogin" element={<AdminLoginPage/>} />
         <Route path="/feature" element={<Feature/>} />
         <Route path="/microphone" element={<MicrophoneAccessPrompt/>} />
         <Route path="/voice" element={<voice/>} />
