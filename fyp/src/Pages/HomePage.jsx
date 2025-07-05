@@ -4,42 +4,63 @@ export default function VoiceWebLandingPage() {
   const navigate = useNavigate();
 
   return (
-    <div className="min-h-screen flex flex-col bg-gray-900 text-white overflow-x-hidden font-sans">
-      
+    <div className="min-h-screen flex flex-col bg-white text-gray-900 font-sans overflow-x-hidden">
 
-      <main className="flex flex-col items-center justify-center px-10 py-12 text-center bg-cover bg-center" style={{ backgroundImage: 'url(https://lh3.googleusercontent.com/aida-public/AB6AXuDo_LWWWiXHlo0G9bZUTXG3eWgyE8eq5HZUJhP2331nzmXMPIntI_6FmTxmN358L8BV2asfjeSGO6jTofC9czfaTfDnqq-CxErmeOL0VCJxgrhjLg43oG5cpSO5OiQsFDxQQjA6338SG29o5PSMavFMB5z2esKLGqk9APGrdWJmIagY4oZJ5fugIwTXR6TtHsveSyf4-YMpDRwuplFKKJ5Ozan1Oc-vrrnX-k1PtUqpYyPDGbj3mzUutXvC1qKBmiHu36qV2z3HkoM3)' }}>
-        <h1 className="text-4xl md:text-5xl font-black mb-2">Control Your Web with Your Voice</h1>
-        <p className="text-base md:text-lg max-w-xl mb-6">Experience hands-free web browsing with our voice-activated commands. Navigate, interact, and control any website effortlessly.</p>
-        <button className="h-10 md:h-12 px-5 rounded-full bg-blue-200 text-gray-900 font-bold text-sm md:text-base">
+      <main className="flex flex-col items-center justify-center px-10 py-16 text-center bg-gradient-to-br from-blue-100 to-white">
+        <h1 className="text-4xl md:text-5xl font-extrabold mb-4 text-blue-800">Control the Web with Your Voice</h1>
+        <p className="text-base md:text-lg max-w-2xl mb-8 text-gray-700">
+          VoiceWeb empowers you to navigate and interact with websites using intuitive voice commands. 
+          Hands-free browsing has never been easier.
+        </p>
+        <button 
+          onClick={() => navigate('/home')}
+          className="h-12 px-6 rounded-full bg-blue-600 hover:bg-blue-700 text-white font-semibold text-base shadow-md transition-all"
+        >
           Get Started
         </button>
       </main>
 
-      <section className="px-10 py-10">
-        <h2 className="text-3xl font-bold mb-4">Key Features</h2>
-        <p className="mb-6 max-w-2xl">Explore the capabilities that make VoiceWeb a revolutionary tool for web interaction.</p>
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
-          <FeatureCard title="Auto Voice Activation" description="Voice recognition starts automatically upon page load, allowing immediate voice commands." />
-          <FeatureCard title="Interactive Element Control" description="Control all interactive elements, including headings, links, and buttons, with simple voice commands." />
-          <FeatureCard title="Universal Website Compatibility" description="Works seamlessly with any website, providing a consistent voice control experience." />
+      <section className="px-10 py-14 bg-gray-50">
+        <h2 className="text-3xl font-bold mb-4 text-center text-blue-900">Key Features</h2>
+        <p className="mb-8 max-w-3xl text-center mx-auto text-gray-600">
+          Discover the powerful features that make VoiceWeb your go-to accessibility solution for voice-driven web interaction.
+        </p>
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+          <FeatureCard title="Smart Voice Activation" description="Auto-detects when you're ready to speak, for seamless control without manual toggling." />
+          <FeatureCard title="Interactive Control" description="Easily open links, click buttons, and navigate between sections—all with your voice." />
+          <FeatureCard title="Universal Compatibility" description="Works on virtually any modern website—no extensions or special setup required." />
         </div>
       </section>
 
-      <section className="text-center px-10 py-16">
-        <h2 className="text-3xl font-bold mb-4">Ready to Experience the Future of Web Browsing?</h2>
-        <p className="mb-6 max-w-2xl mx-auto">Start using VoiceWeb today and transform how you interact with the web.</p>
-        <button className="h-10 md:h-12 px-5 rounded-full bg-blue-200 text-gray-900 font-bold text-sm md:text-base">
+      <section className="bg-blue-50 px-10 py-20 text-center">
+        <h2 className="text-3xl font-bold mb-4 text-blue-800">Revolutionize How You Browse</h2>
+        <p className="mb-6 max-w-2xl mx-auto text-gray-700">
+          Whether you're multitasking, visually impaired, or just want a futuristic way to surf, VoiceWeb is your perfect companion.
+        </p>
+        <button 
+          onClick={() => navigate('/home')}
+          className="h-12 px-6 rounded-full bg-blue-600 hover:bg-blue-700 text-white font-semibold text-base shadow-md transition-all"
+        >
           Get Started
         </button>
       </section>
 
-      <footer className="text-center py-10 border-t border-gray-700">
-        <div className="flex justify-center flex-wrap gap-6 mb-4">
-          <button onClick={() => navigate('/privacy')} className="text-sm text-gray-400">Privacy Policy</button>
-          <button onClick={() => navigate('/terms')} className="text-sm text-gray-400">Terms of Service</button>
-          <button onClick={() => navigate('/contact')} className="text-sm text-gray-400">Contact Us</button>
+      <footer className="bg-white border-t border-gray-200 py-8 px-6 text-sm text-gray-600">
+        <div className="flex justify-center flex-wrap gap-12 mb-6">
+          <div className="max-w-xs">
+            <h4 className="font-semibold text-gray-800 mb-2">Privacy Policy</h4>
+            <p>We do not store your voice data. All processing is done locally in your browser for complete security and privacy.</p>
+          </div>
+          <div className="max-w-xs">
+            <h4 className="font-semibold text-gray-800 mb-2">Terms & Conditions</h4>
+            <p>VoiceWeb is provided as-is without warranties. Use responsibly and at your own risk. No data is sold or shared.</p>
+          </div>
+          <div className="max-w-xs">
+            <h4 className="font-semibold text-gray-800 mb-2">Contact Us</h4>
+            <p>For support, partnerships, or questions, email <a href="mailto:support@voiceweb.com" className="text-blue-600 underline">support@voiceweb.com</a>.</p>
+          </div>
         </div>
-        <p className="text-sm text-gray-500">© 2024 VoiceWeb. All rights reserved.</p>
+        <p className="text-center text-gray-500">© 2025 VoiceWeb. All rights reserved.</p>
       </footer>
     </div>
   );
@@ -47,9 +68,9 @@ export default function VoiceWebLandingPage() {
 
 function FeatureCard({ title, description }) {
   return (
-    <div className="bg-gray-800 border border-gray-600 rounded-lg p-4">
-      <h3 className="font-bold text-base mb-1">{title}</h3>
-      <p className="text-sm text-gray-400">{description}</p>
+    <div className="bg-white border border-gray-200 rounded-lg p-6 shadow-sm hover:shadow-md transition-all">
+      <h3 className="font-semibold text-lg text-blue-700 mb-2">{title}</h3>
+      <p className="text-sm text-gray-600">{description}</p>
     </div>
   );
 }

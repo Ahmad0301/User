@@ -10,6 +10,8 @@ import voice from "./Pages/Voice";
 import error from "./Pages/error";
 import Navbar from "./Components/Navbar";
 import FeedbackPage from "./Pages/Feedback";
+import HelpPage from "./Pages/Help";
+
 
 
 
@@ -32,6 +34,8 @@ function App() {
         <Route path="/voice" element={<voice/>} />
         <Route path="/error" element={<error/>} />
         <Route path="/feedback" element={<FeedbackPage/>} />
+         <Route path="/help" element={<HelpPage/>} />
+
 
 
 
